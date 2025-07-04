@@ -1,5 +1,5 @@
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 public class RecursionTest {
   
@@ -23,20 +23,20 @@ public class RecursionTest {
 
   @Test
   public void testCountHi2() {
-    assertEquals(1, RecursionProblems.countHi("ahixhi"));
-    assertEquals(2, RecursionProblems.countHi("ahibhi"));
-    assertEquals(0, RecursionProblems.countHi("xhixhi"));
-    assertEquals(1, RecursionProblems.countHi("hihi"));
-    assertEquals(0, RecursionProblems.countHi("xhi"));
+    assertEquals(1, RecursionProblems.countHi2("ahixhi"));
+    assertEquals(2, RecursionProblems.countHi2("ahibhi"));
+    assertEquals(0, RecursionProblems.countHi2("xhixhi"));
+    assertEquals(1, RecursionProblems.countHi2("hihi"));
+    assertEquals(0, RecursionProblems.countHi2("xhi"));
   }
 
   @Test
   public void testStrCount() {
-    assertEquals(2, RecursionProblems.countHi("catcowcat", "cat"));
-    assertEquals(1, RecursionProblems.countHi("catcowcat", "cow"));
-    assertEquals(0, RecursionProblems.countHi("catcowcat", "dog"));
-    assertEquals(3, RecursionProblems.countHi("abcabcabc", "abc"));
-    assertEquals(0, RecursionProblems.countHi("", "a"));
+    assertEquals(2, RecursionProblems.strCount("catcowcat", "cat"));
+    assertEquals(1, RecursionProblems.strCount("catcowcat", "cow"));
+    assertEquals(0, RecursionProblems.strCount("catcowcat", "dog"));
+    assertEquals(3, RecursionProblems.strCount("abcabcabc", "abc"));
+    assertEquals(0, RecursionProblems.strCount("", "a"));
   }
 
   public void testStringClean() {
