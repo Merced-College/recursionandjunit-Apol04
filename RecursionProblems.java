@@ -16,7 +16,7 @@ public class RecursionProblems {
 
   public static int countHi2(String str) {
     if (str.length() < 2) return 0;
-    if (str.startWith("xHi")) return countHi2 (str.substring(3));
+    if (str.startsWith("xHi")) return countHi2 (str.substring(3));
     if (str.startsWith("hi")) return 1 + countHi(str.substring(2));
     return countHi(str.substring(1));
   }
@@ -29,7 +29,15 @@ public class RecursionProblems {
 
   public static String stringClean(String str) {
     if (str.length() <= 1) return str;
-    if (str.charAt(0) == str.charAt(1) return stringClean(str.substring(1));
+    if (str.charAt(0) == str.charAt(1)) return stringClean(str.substring(1));
     return str.charAt(0) + stringClean(str.substring(1));
+  }
+
+  public static void main(String[] args) {
+    System.out.println("count8(8818): " + count8(8818));
+    System.out.println("countHi(\"xhixhix\"): " + countHi("xhixhix"));
+    System.out.println("countHi2(\"xhixhi\"): " + countHi2("xhixhi"));
+    System.out.println("strCount(\"catcowcat\"), (\"cat\"): " + strCount("catcowcat", "cat"));
+    System.out.println("sringClean(\"yyzzza\"): " + stringClean("yyzzza"));
   }
 }
